@@ -4,7 +4,7 @@ mysql:
   sql_mode: 'STRICT_TRANS_TABLES'
   custom_config: |
     # Configuration added by mysql.custom_config in solano.yml
-    innodb_doublewrite = OFF
+    innodb_doublewrite = ON
     innodb_file_per_table = OFF
     innodb_flush_log_at_trx_commit = 2
 tests:

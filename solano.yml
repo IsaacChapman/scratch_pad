@@ -9,5 +9,5 @@ mysql:
     innodb_flush_log_at_trx_commit = 2
 tests:
   - ps afxu | grep mysql | grep -v grep
-  - cat $HOME/db/mysql$TDDIUM_TID}/my.cnf
+  - cat $HOME/db/mysql${TDDIUM_TID}/my.cnf
   - mysql -u $TDDIUM_DB_MYSQL_USER -p${TDDIUM_DB_MYSQL_PASSWORD} -e 'SHOW VARIABLES'

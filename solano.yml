@@ -1,2 +1,8 @@
 tests:
   - /bin/true
+
+elasticsearch:
+  version: '5.5'
+
+tests:
+  - curl -XGET 'http://localhost:9200'

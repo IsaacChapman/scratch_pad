@@ -4,5 +4,8 @@ tests:
 elasticsearch:
   version: '5.5'
 
+java:
+  java_version: 'java-8-openjdk'
+
 tests:
   - curl -XGET 'http://localhost:9200'

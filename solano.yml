@@ -1,2 +1,12 @@
+java:
+  java_version: java-8-openjdk
+hooks:
+  pre_setup: |
+    set -e # Exit on error
+    mkdir -p $HOME/bin # Early in $PATH
+    wget -O $HOME/bin/lein https://raw.githubusercontent.com/technomancy/leiningen/2.7.1/bin/lein
+    chmod a+x $HOME/bin/lein
+    lein
+    lein --version
 tests:
   - /bin/true

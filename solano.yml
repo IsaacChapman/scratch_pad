@@ -1,2 +1,15 @@
+hooks:
+  early: |
+    set -e # Exit on error
+    wget -O $TMPDIR/solano-postgresql-9.4.12-with-geo.tar.bz2 https://solano-backup.s3.amazonaws.com/src-objects/solano-postgresql-9.4.12-with-geo.tar.bz2
+    sudo tar -xjf $TMPDIR/solano-postgresql-9.4.12-with-geo.tar.bz2 -C /
+  pre_setup: |
+    which psql
+    psql --version
+    which pg_config
+    pg_config --version
 tests:
-  - /bin/true
+  - which psql
+  - psql --version
+  - which pg_config
+  - pg_config --version

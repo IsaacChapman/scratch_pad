@@ -1,2 +1,5 @@
+hooks:
+  pre_setup: npm install yarn
 tests:
-  - /bin/true
+  - which yarn
+  - yarn --version

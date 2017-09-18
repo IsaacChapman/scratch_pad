@@ -1,5 +1,8 @@
 hooks:
   pre_setup: |
+    set -o errexit -o pipefail # Exit on error
+    # remove old apt source
+    sudo rm -f /etc/apt/sources.list.d/winswitch*
     curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
     sudo apt-get install -y nodejs
 tests:

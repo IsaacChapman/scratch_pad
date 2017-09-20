@@ -1,2 +1,7 @@
+nodejs:
+  version: '6.11.3'
 tests:
-  - /bin/true
+  - which npm
+  - npm --version
+  - which node
+  - node --version

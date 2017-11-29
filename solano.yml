@@ -1,5 +1,5 @@
 nodejs:
-  version: '8.5.0'
+  version: '8.9.0'
 tests:
   - which npm
   - npm --version

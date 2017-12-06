@@ -1,3 +1,5 @@
+mysql:
+  version: '5.7'
 hooks:
   early: |
     set -e # Exit on error

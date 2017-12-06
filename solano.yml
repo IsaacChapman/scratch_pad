@@ -1,2 +1,11 @@
+hooks:
+  early: |
+    set -e # Exit on error
+    cd $TMPDIR
+    wget https://s3.amazonaws.com/solano-backup/src-objects/mysql-5.7.19.tar.gz
+    tar xzf mysql-5.7.19.tar.gz
+    sudo mv mysql-5.7.19-linux-glibc2.12-x86_64 /usr/local/mysql/mysql-5.7.19
+    sudo ln -sf mysql-5.7.19 /usr/local/mysql/mysql-5.7
 tests:
-  - /bin/true
+  - which mysql
+  - mysql --version
